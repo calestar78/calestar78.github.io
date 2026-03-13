@@ -1,0 +1,4876 @@
+/* ========================================
+   БАЗОВЫЕ СТИЛИ
+   ======================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding-bottom: 50px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ========================================
+   HEADER И НАВИГАЦИЯ
+   ======================================== */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 10px 25px;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    background: transparent;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+header nav a:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* ========================================
+   ОСНОВНОЙ КОНТЕНТ
+   ======================================== */
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    animation: fadeIn 0.6s ease-out;
+}
+
+main#index,
+main#about,
+.country-page {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+/* ========================================
+   ЗАГОЛОВОК СТРАНЫ (ОБЩИЙ)
+   ======================================== */
+.country-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.country-header h1 {
+    font-size: 3rem !important;
+    margin-bottom: 10px;
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+    font-weight: bold;
+}
+
+.country-header .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.95;
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+/* ========================================
+   ФРАНЦИЯ - СПЕЦИФИЧНЫЕ СТИЛИ
+   ======================================== */
+.france-header {
+    background: linear-gradient(135deg, #002395 0%, #0055a4 50%, #ed2939 100%) !important;
+}
+
+/* ========================================
+   ИСПАНИЯ - СПЕЦИФИЧНЫЕ СТИЛИ
+   ======================================== */
+.spain-header {
+    background: linear-gradient(135deg, #c62828 0%, #aa151b 50%, #ffcc00 100%) !important;
+}
+
+/* ========================================
+   ИТАЛИЯ - СПЕЦИФИЧНЫЕ СТИЛИ (ИСПРАВЛЕНО)
+   ======================================== */
+.italy-header {
+    /* Вертикальные полосы: зелёный | белый | красный */
+    background: 
+        linear-gradient(
+            to right,
+            #009246 0%, #009246 33.33%,
+            #ffffff 33.33%, #ffffff 66.66%,
+            #ce2b37 66.66%, #ce2b37 100%
+        ) !important;
+    padding: 60px 40px !important;
+}
+
+.italy-header h1 {
+    color: #333 !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3) !important;
+}
+
+.italy-header .subtitle {
+    color: #333 !important;
+    text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+/* ========================================
+   СЕКЦИИ КОНТЕНТА
+   ======================================== */
+.content-section {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.content-section h2 {
+    color: #667eea !important;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #764ba2;
+    display: inline-block;
+}
+
+/* Цвет заголовков для стран */
+#france .content-section h2 {
+    color: #002395 !important;
+    border-bottom-color: #ed2939;
+}
+
+#spain .content-section h2 {
+    color: #c62828 !important;
+    border-bottom-color: #ffcc00;
+}
+
+#italy .content-section h2 {
+    color: #ce2b37 !important;
+    border-bottom-color: #009246;
+}
+
+/* ========================================
+   БЛОК С ИНФОРМАЦИЕЙ (HIGHLIGHT)
+   ======================================== */
+.highlight {
+    background: linear-gradient(120deg, #fff 0%, #f8f9fa 100%);
+    padding: 25px;
+    border-radius: 12px;
+    margin: 25px 0;
+    border-left: 5px solid #667eea;
+    border: 2px solid #e0e0e0;
+}
+
+.highlight h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+}
+
+.highlight p {
+    margin: 10px 0;
+    padding: 5px 0;
+    border-bottom: 1px dashed #e0e0e0;
+}
+
+.highlight p:last-child {
+    border-bottom: none;
+}
+
+/* Цвета highlight для стран */
+#france .highlight {
+    border-left-color: #002395;
+    background: linear-gradient(120deg, #fff 0%, #f8f9fa 100%);
+}
+
+#france .highlight h3 {
+    color: #002395;
+}
+
+#spain .highlight {
+    border-left-color: #c62828;
+    background: linear-gradient(120deg, #ffcc00 0%, #ffd700 100%);
+}
+
+#spain .highlight h3 {
+    color: #c62828;
+}
+
+#italy .highlight {
+    border-left-color: #ce2b37;
+}
+
+#italy .highlight h3 {
+    color: #ce2b37;
+}
+
+/* ========================================
+   ДОСТОПРИМЕЧАТЕЛЬНОСТИ
+   ======================================== */
+.attractions-grid,
+.landmarks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.attraction-card,
+.landmark-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    border: 2px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+.attraction-card:hover,
+.landmark-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.attraction-card h3,
+.landmark-card h3 {
+    color: #667eea;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.attraction-card p,
+.landmark-card p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.attraction-card .location,
+.landmark-card .location {
+    font-weight: bold;
+    color: #764ba2;
+    margin-top: 12px;
+    display: block;
+    font-size: 0.9rem;
+}
+
+/* Цвета для стран */
+#france .attraction-card h3 {
+    color: #ed2939;
+}
+
+#france .attraction-card:hover {
+    border-color: #002395;
+}
+
+#spain .attraction-card h3 {
+    color: #1a237e;
+}
+
+#spain .attraction-card:hover {
+    border-color: #ffcc00;
+}
+
+#italy .landmark-card h3 {
+    background: #ce2b37;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border-radius: 8px 8px 0 0;
+    margin: -20px -20px 15px -20px;
+}
+
+#italy .landmark-card {
+    overflow: hidden;
+}
+
+#italy .landmark-card .location {
+    color: #ce2b37;
+}
+
+/* ========================================
+   СПОРТИВНЫЕ КАРТОЧКИ
+   ======================================== */
+.sports-achievements,
+.sports-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.sport-card {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.sport-card:hover {
+    transform: translateY(-5px);
+}
+
+.sport-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #ffd700;
+}
+
+.sport-card ul {
+    list-style: none;
+    text-align: left;
+    padding: 0;
+}
+
+.sport-card li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    font-size: 0.95rem;
+}
+
+.sport-card li:last-child {
+    border-bottom: none;
+}
+
+/* Цвета для стран */
+#france .sport-card {
+    background: linear-gradient(135deg, #002395 0%, #0055a4 100%);
+}
+
+#france .sport-card h3 {
+    color: #ed2939;
+}
+
+#spain .sport-card {
+    background: linear-gradient(135deg, #c62828 0%, #aa151b 100%);
+}
+
+#spain .sport-card h3 {
+    color: #ffcc00;
+}
+
+#italy .sport-card {
+    background: linear-gradient(135deg, #ce2b37 0%, #a61f2b 100%);
+}
+
+#italy .sport-card h3 {
+    color: #009246;
+}
+
+#italy .sport-card p {
+    color: rgba(255,255,255,0.95);
+}
+
+#italy .sport-note {
+    margin-top: 30px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #ce2b37;
+}
+
+/* ========================================
+   СТАТИСТИКА
+   ======================================== */
+.stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 20px;
+    min-width: 150px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #667eea;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.4;
+}
+
+/* Цвета для стран */
+#france .stat-number {
+    color: #ed2939;
+}
+
+#spain .stat-number {
+    color: #c62828;
+}
+
+#italy .stat-number {
+    color: #ce2b37;
+}
+
+/* ========================================
+   ЦИТАТА
+   ======================================== */
+.quote {
+    font-style: italic;
+    text-align: center;
+    max-width: 800px;
+    margin: 30px auto;
+    font-size: 1.3rem;
+    color: #2c3e50;
+    padding: 25px;
+    border-left: 4px solid #ffd700;
+    background: rgba(255, 215, 0, 0.15);
+    border-radius: 0 10px 10px 0;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* ========================================
+   СТРАНИЦА ОБ АВТОРЕ
+   ======================================== */
+.author-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.author-photo {
+    flex: 0 0 360px;
+}
+
+.author-photo img {
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #667eea;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.author-photo img:hover {
+    transform: scale(1.05);
+}
+
+.author-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.author-info h2,
+.cities-section h2 {
+    color: #667eea;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.country-list,
+.city-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.country-list li,
+.city-list li {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+    color: #333;
+    transition: all 0.3s ease;
+    border-left: 4px solid #667eea;
+}
+
+.country-list li:hover,
+.city-list li:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transform: translateX(10px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.cities-section {
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 2px solid #e0e0e0;
+}
+
+/* ========================================
+   СПИСКИ СТРАН (ГЛАВНАЯ)
+   ======================================== */
+.row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.card {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 15px;
+    padding: 25px;
+    min-width: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card ol {
+    list-style: none;
+    counter-reset: country-counter;
+}
+
+.card li {
+    padding: 10px 15px;
+    margin: 8px 0;
+    background: white;
+    border-radius: 8px;
+    color: #333;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: default;
+    position: relative;
+    padding-left: 40px;
+}
+
+.card li:before {
+    counter-increment: country-counter;
+    content: counter(country-counter);
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card li:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    transform: translateX(5px);
+}
+
+.card li:hover:before {
+    background: white;
+    color: #667eea;
+}
+
+/* ========================================
+   ТАБЛИЦА
+   ======================================== */
+.table-container {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    overflow-x: auto;
+    margin: 40px auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+th {
+    padding: 18px 15px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #e0e0e0;
+    transition: all 0.3s ease;
+}
+
+tbody tr:hover {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+    transform: scale(1.01);
+}
+
+td {
+    padding: 15px;
+    color: #555;
+    font-size: 15px;
+}
+
+.highlight {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 8px 15px;
+    display: inline-block;
+    min-width: 30px;
+    text-align: center;
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+footer {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: white !important;
+    text-align: center;
+    padding: 30px;
+    margin: 40px auto 20px;
+    max-width: 1200px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+footer p {
+    color: white !important;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* ========================================
+   АНИМАЦИИ
+   ======================================== */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+main {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* ========================================
+   АДАПТИВНОСТЬ
+   ======================================== */
+@media (max-width: 768px) {
+    header nav {
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    header nav a {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    
+    main {
+        padding: 0 15px;
+        margin: 20px auto;
+    }
+    
+    main#index,
+    main#about,
+    .country-page {
+        padding: 25px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    .country-header {
+        padding: 30px;
+    }
+    
+    .country-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .country-header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+    
+    .author-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .author-photo {
+        flex: none;
+    }
+    
+    .author-photo img {
+        width: 280px;
+        height: 280px;
+    }
+    
+    .country-list,
+    .city-list {
+        grid-template-columns: 1fr;
+    }
+    
+    th, td {
+        padding: 12px 10px;
+        font-size: 14px;
+    }
+    
+    .attractions-grid,
+    .landmarks-grid,
+    .sports-achievements,
+    .sports-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .stats {
+        flex-direction: column;
+    }
+    
+    .stat-item {
+        width: 100%;
+    }
+    
+    .content-section {
+        padding: 20px;
+    }
+    
+    .content-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .quote {
+        font-size: 1.1rem;
+        padding: 20px;
+    }
+}
+
+/* ========================================
+   ГЕРМАНИЯ - СПЕЦИФИЧНЫЕ СТИЛИ
+   ======================================== */
+.germany-header {
+    /* Горизонтальные полосы: чёрный | красный | золотой */
+    background: 
+        linear-gradient(
+            to bottom,
+            #000000 0%, #000000 33.33%,
+            #DD0000 33.33%, #DD0000 66.66%,
+            #FFCE00 66.66%, #FFCE00 100%
+        ) !important;
+    padding: 60px 40px !important;
+}
+
+.germany-header h1 {
+    color: white !important;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8) !important;
+}
+
+.germany-header .subtitle {
+    color: white !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Карточки спорта для Германии */
+#germany .sport-card {
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+}
+
+#germany .sport-card h3 {
+    color: #FFCE00 !important;
+}
+
+#germany .sport-card li {
+    border-bottom-color: rgba(255,255,255,0.3);
+}
+
+/* Переопределение для Германии */
+#germany .content-section h2 {
+    color: #DD0000 !important;
+    border-bottom-color: #FFCE00;
+}
+
+#germany .highlight {
+    border-left-color: #000000;
+}
+
+#germany .highlight h3 {
+    color: #000000;
+}
+
+#germany .attraction-card h3 {
+    color: #DD0000;
+}
+
+#germany .attraction-card:hover {
+    border-color: #FFCE00;
+}
+
+#germany .attraction-card .location {
+    color: #000000;
+}
+
+#germany .stat-number {
+    color: #DD0000;
+}
+
+/* ========================================
+   ВЕЛИКОБРИТАНИЯ - СПЕЦИФИЧНЫЕ СТИЛИ
+   ======================================== */
+.uk-header {
+    /* Union Jack - упрощённый градиент (синий фон с красными и белыми элементами) */
+    background: 
+        linear-gradient(
+            135deg,
+            #012169 0%, #012169 40%,
+            #C8102E 40%, #C8102E 60%,
+            #012169 60%, #012169 100%
+        ) !important;
+    padding: 60px 40px !important;
+}
+
+.uk-header h1 {
+    color: white !important;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8) !important;
+}
+
+.uk-header .subtitle {
+    color: white !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Карточки спорта для Великобритании */
+#uk .sport-card {
+    background: linear-gradient(135deg, #012169 0%, #003399 100%);
+}
+
+#uk .sport-card h3 {
+    color: #C8102E !important;
+}
+
+#uk .sport-card li {
+    border-bottom-color: rgba(255,255,255,0.3);
+}
+
+/* Переопределение для Великобритании */
+#uk .content-section h2 {
+    color: #C8102E !important;
+    border-bottom-color: #012169;
+}
+
+#uk .highlight {
+    border-left-color: #012169;
+}
+
+#uk .highlight h3 {
+    color: #012169;
+}
+
+#uk .attraction-card h3 {
+    color: #C8102E;
+}
+
+#uk .attraction-card:hover {
+    border-color: #012169;
+}
+
+#uk .attraction-card .location {
+    color: #012169;
+}
+
+#uk .stat-number {
+    color: #C8102E;
+}
+
+/* ========================================
+   ЕВРОПА - СПЕЦИФИЧНЫЕ СТИЛИ
+   ======================================== */
+.europe-header {
+    /* Синий флаг Европы с золотыми звёздами (упрощённо) */
+    background: 
+        linear-gradient(
+            135deg,
+            #003399 0%, #003399 100%
+        ) !important;
+    padding: 60px 40px !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.europe-header::before {
+    /* Звёзды Европы (декоративный элемент) */
+    content: "★★★★★";
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #FFCC00;
+    font-size: 2rem;
+    letter-spacing: 10px;
+    opacity: 0.5;
+}
+
+.europe-header h1 {
+    color: white !important;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8) !important;
+}
+
+.europe-header .subtitle {
+    color: white !important;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+/* Навигация по странам */
+.countries-nav {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 25px 0;
+    padding: 20px;
+}
+
+.country-link {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #003399 0%, #0055cc 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border: 2px solid transparent;
+}
+
+.country-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,51,153,0.4);
+    background: linear-gradient(135deg, #0055cc 0%, #003399 100%);
+    border-color: #FFCC00;
+}
+
+/* Список вызовов */
+.challenges-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.challenges-list li {
+    padding: 12px 20px;
+    margin: 10px 0;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+    border-radius: 8px;
+    border-left: 4px solid #003399;
+    color: #333;
+    font-weight: 500;
+}
+
+.challenges-list li:hover {
+    background: linear-gradient(135deg, #003399 0%, #0055cc 100%);
+    color: white;
+    transform: translateX(10px);
+    transition: all 0.3s ease;
+}
+
+/* Заключение */
+.conclusion {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #FFCC00 0%, #FFDD44 100%);
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 600;
+    color: #003399;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Переопределение для Европы */
+#europe .content-section h2 {
+    color: #003399 !important;
+    border-bottom-color: #FFCC00;
+}
+
+#europe .highlight {
+    border-left-color: #003399;
+}
+
+#europe .highlight h3 {
+    color: #003399;
+}
+
+#europe .stat-number {
+    color: #003399;
+}
+
+/* Адаптивность для навигации стран */
+@media (max-width: 768px) {
+    .countries-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .country-link {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+    
+    .europe-header::before {
+        font-size: 1.5rem;
+        letter-spacing: 5px;
+    }
+}
+
+/* ===== Страницы континентов ===== */
+.continent-page {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    margin: 40px auto;
+    max-width: 1200px;
+    animation: fadeIn 0.6s ease-out;
+}
+
+.continent-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px;
+    background: linear-gradient(135deg, #8b4513 0%, #cd853f 50%, #daa520 100%);
+    border-radius: 15px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(139, 69, 19, 0.4);
+}
+
+.continent-header h1 {
+    font-size: 3rem !important;
+    margin-bottom: 10px;
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+    font-weight: bold;
+}
+
+.continent-header .subtitle {
+    font-size: 1.3rem;
+    opacity: 0.95;
+    color: white !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Секции контента */
+.content-section {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.content-section h2 {
+    color: #8b4513 !important;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #daa520;
+    display: inline-block;
+}
+
+/* Списки особенностей и фактов */
+.feature-list,
+.facts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature-list li,
+.facts-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #daa520;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+.feature-list li:hover,
+.facts-list li:hover {
+    background: linear-gradient(135deg, #fff9e6 0%, #fff3cd 100%);
+    transform: translateX(8px);
+    border-left-color: #8b4513;
+    box-shadow: 0 5px 15px rgba(139, 69, 19, 0.2);
+}
+
+.feature-list li strong,
+.facts-list li strong {
+    color: #8b4513;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Контейнер */
+.container {
+    max-width: 100%;
+    padding: 0;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .continent-page {
+        padding: 25px;
+        margin: 20px auto;
+    }
+    
+    .continent-header {
+        padding: 30px;
+    }
+    
+    .continent-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .continent-header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .content-section {
+        padding: 20px;
+    }
+    
+    .content-section h2 {
+        font-size: 1.6rem;
+    }
+    
+    .feature-list li,
+    .facts-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+}
+
+/* ===== Китай - специфичные стили ===== */
+.china-header {
+    background: linear-gradient(135deg, #de2910 0%, #ffde00 50%, #de2910 100%);
+}
+
+/* Переопределение для Китая */
+#china .content-section h2 {
+    color: #de2910 !important;
+    border-bottom-color: #ffde00;
+}
+
+#china .landmark-list,
+#china .sport-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#china .landmark-list li,
+#china .sport-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #de2910;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#china .landmark-list li:hover,
+#china .sport-list li:hover {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    transform: translateX(8px);
+    border-left-color: #ffde00;
+    box-shadow: 0 5px 15px rgba(222, 41, 16, 0.2);
+}
+
+#china .landmark-list li strong,
+#china .sport-list li strong {
+    color: #de2910;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#china .location {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #de2910;
+    font-size: 0.9rem;
+}
+
+#china .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: #fff9e6;
+    border-radius: 10px;
+    border-left: 4px solid #ffde00;
+    font-weight: 500;
+}
+
+/* Адаптивность для Китая */
+@media (max-width: 768px) {
+    #china .landmark-list li,
+    #china .sport-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #china .sport-note {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+}
+
+.country-link {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.country-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+/* Навигация по странам */
+.countries-nav {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px 0;
+    padding: 20px;
+}
+
+.country-link {
+    display: inline-block;
+    padding: 15px 30px;
+    background: linear-gradient(135deg, #8b4513 0%, #cd853f 100%);
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.country-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #cd853f 0%, #daa520 100%);
+}
+
+/* ===== Индия - специфичные стили ===== */
+.india-header {
+    background: linear-gradient(135deg, #ff9933 0%, #ffffff 33%, #138808 66%, #138808 100%);
+    background-size: 300% 100%;
+    background-position: left;
+}
+
+/* Переопределение для Индии */
+#india .content-section h2 {
+    color: #ff9933 !important;
+    border-bottom-color: #138808;
+}
+
+#india .content-section h3 {
+    color: #138808;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#india .landmark-list,
+#india .sport-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#india .landmark-list li,
+#india .sport-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #ff9933;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#india .landmark-list li:hover,
+#india .sport-list li:hover {
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+    transform: translateX(8px);
+    border-left-color: #138808;
+    box-shadow: 0 5px 15px rgba(255, 153, 51, 0.2);
+}
+
+#india .landmark-list li strong,
+#india .sport-list li strong {
+    color: #ff9933;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#india .location {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #138808;
+    font-size: 0.9rem;
+}
+
+#india .highlight {
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe8cc 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #ff9933;
+    margin-bottom: 25px;
+}
+
+#india .highlight p {
+    margin: 0;
+    color: #333;
+}
+
+#india .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-radius: 10px;
+    border-left: 4px solid #138808;
+    font-weight: 500;
+}
+
+/* Адаптивность для Индии */
+@media (max-width: 768px) {
+    #india .landmark-list li,
+    #india .sport-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #india .sport-note {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #india .content-section h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* ===== Турция - специфичные стили ===== */
+.turkey-header {
+    background: linear-gradient(135deg, #e30a17 0%, #e30a17 100%);
+}
+
+/* Переопределение для Турции */
+#turkey .content-section h2 {
+    color: #e30a17 !important;
+    border-bottom-color: #e30a17;
+}
+
+#turkey .content-section h3 {
+    color: #e30a17;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#turkey .landmark-list,
+#turkey .sport-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#turkey .landmark-list li,
+#turkey .sport-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #e30a17;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#turkey .landmark-list li:hover,
+#turkey .sport-list li:hover {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    transform: translateX(8px);
+    border-left-color: #c41e3a;
+    box-shadow: 0 5px 15px rgba(227, 10, 23, 0.2);
+}
+
+#turkey .landmark-list li strong,
+#turkey .sport-list li strong {
+    color: #e30a17;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#turkey .sub-list {
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#turkey .sub-list li {
+    background: #f8f9fa;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border-left: 3px solid #e30a17;
+    font-size: 0.95rem;
+}
+
+#turkey .sub-list li:hover {
+    background: #ffebee;
+    transform: translateX(5px);
+}
+
+#turkey .highlight {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #e30a17;
+    margin-bottom: 25px;
+}
+
+#turkey .highlight p {
+    margin: 0;
+    color: #333;
+}
+
+#turkey .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    border-radius: 10px;
+    border-left: 4px solid #e30a17;
+    font-weight: 500;
+}
+
+/* Адаптивность для Турции */
+@media (max-width: 768px) {
+    #turkey .landmark-list li,
+    #turkey .sport-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #turkey .sport-note {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #turkey .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    #turkey .sub-list {
+        margin-left: 15px;
+    }
+}
+
+/* ===== Япония - специфичные стили ===== */
+.japan-header {
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.japan-header::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+    background: #bc002d;
+    border-radius: 50%;
+    opacity: 0.3;
+}
+
+/* Переопределение для Японии */
+#japan .country-header h1 {
+    color: #bc002d !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3) !important;
+}
+
+#japan .country-header .subtitle {
+    color: #333 !important;
+}
+
+#japan .content-section h2 {
+    color: #bc002d !important;
+    border-bottom-color: #bc002d;
+}
+
+#japan .content-section h3 {
+    color: #bc002d;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#japan .landmark-list,
+#japan .sport-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#japan .landmark-list li,
+#japan .sport-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #bc002d;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#japan .landmark-list li:hover,
+#japan .sport-list li:hover {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    transform: translateX(8px);
+    border-left-color: #8b0000;
+    box-shadow: 0 5px 15px rgba(188, 0, 45, 0.2);
+}
+
+#japan .landmark-list li strong,
+#japan .sport-list li strong {
+    color: #bc002d;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#japan .sub-list {
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#japan .sub-list li {
+    background: #f8f9fa;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border-left: 3px solid #bc002d;
+    font-size: 0.95rem;
+}
+
+#japan .sub-list li:hover {
+    background: #ffebee;
+    transform: translateX(5px);
+}
+
+#japan .highlight {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #bc002d;
+    margin-bottom: 25px;
+}
+
+#japan .highlight p {
+    margin: 0;
+    color: #333;
+    font-style: normal;
+}
+
+#japan .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    border-radius: 10px;
+    border-left: 4px solid #bc002d;
+    font-weight: 500;
+}
+
+/* Адаптивность для Японии */
+@media (max-width: 768px) {
+    #japan .landmark-list li,
+    #japan .sport-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #japan .sport-note {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #japan .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    #japan .sub-list {
+        margin-left: 15px;
+    }
+    
+    .japan-header::before {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* ===== Пакистан - специфичные стили ===== */
+.pakistan-header {
+    background: linear-gradient(135deg, #115740 0%, #115740 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.pakistan-header::after {
+    content: "☪";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: white;
+    opacity: 0.2;
+}
+
+/* Переопределение для Пакистана */
+#pakistan .country-header h1 {
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+}
+
+#pakistan .country-header .subtitle {
+    color: white !important;
+    opacity: 0.95;
+}
+
+#pakistan .content-section h2 {
+    color: #115740 !important;
+    border-bottom-color: #115740;
+}
+
+#pakistan .content-section h3 {
+    color: #115740;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#pakistan .landmark-list,
+#pakistan .sport-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#pakistan .landmark-list li,
+#pakistan .sport-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #115740;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#pakistan .landmark-list li:hover,
+#pakistan .sport-list li:hover {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    transform: translateX(8px);
+    border-left-color: #0d4130;
+    box-shadow: 0 5px 15px rgba(17, 87, 64, 0.2);
+}
+
+#pakistan .landmark-list li strong,
+#pakistan .sport-list li strong {
+    color: #115740;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#pakistan .sub-list {
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#pakistan .sub-list li {
+    background: #e8f5e9;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border-left: 3px solid #115740;
+    font-size: 0.95rem;
+}
+
+#pakistan .sub-list li:hover {
+    background: #c8e6c9;
+    transform: translateX(5px);
+}
+
+#pakistan .highlight {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #115740;
+    margin-bottom: 25px;
+}
+
+#pakistan .highlight p {
+    margin: 0;
+    color: #333;
+}
+
+#pakistan .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-radius: 10px;
+    border-left: 4px solid #115740;
+    font-weight: 500;
+}
+
+/* Адаптивность для Пакистана */
+@media (max-width: 768px) {
+    #pakistan .landmark-list li,
+    #pakistan .sport-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #pakistan .sport-note {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #pakistan .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    #pakistan .sub-list {
+        margin-left: 15px;
+    }
+    
+    .pakistan-header::after {
+        font-size: 60px;
+    }
+}
+
+/* ===== Южная Америка - специфичные стили ===== */
+.south-america-header {
+    background: linear-gradient(135deg, #009739 0%, #fcd116 33%, #003893 66%, #003893 100%);
+    background-size: 300% 100%;
+    background-position: left;
+}
+
+/* Переопределение для Южной Америки */
+#south-america .content-section h2 {
+    color: #003893 !important;
+    border-bottom-color: #fcd116;
+}
+
+#south-america .content-section h3 {
+    color: #009739;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#south-america .landmark-list,
+#south-america .sport-list,
+#south-america .feature-list,
+#south-america .country-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#south-america .landmark-list li,
+#south-america .sport-list li,
+#south-america .feature-list li,
+#south-america .country-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #003893;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#south-america .landmark-list li:hover,
+#south-america .sport-list li:hover,
+#south-america .feature-list li:hover,
+#south-america .country-list li:hover {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    transform: translateX(8px);
+    border-left-color: #fcd116;
+    box-shadow: 0 5px 15px rgba(0, 56, 147, 0.2);
+}
+
+#south-america .landmark-list li strong,
+#south-america .sport-list li strong,
+#south-america .feature-list li strong,
+#south-america .country-list li strong {
+    color: #003893;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#south-america .location {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #009739;
+    font-size: 0.9rem;
+}
+
+#south-america .sub-list {
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#south-america .sub-list li {
+    background: #e3f2fd;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border-left: 3px solid #003893;
+    font-size: 0.95rem;
+}
+
+#south-america .sub-list li:hover {
+    background: #bbdefb;
+    transform: translateX(5px);
+}
+
+#south-america .highlight {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #003893;
+    margin-bottom: 25px;
+}
+
+#south-america .highlight p {
+    margin: 0;
+    color: #333;
+    font-style: normal;
+}
+
+#south-america .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-radius: 10px;
+    border-left: 4px solid #009739;
+    font-weight: 500;
+}
+
+#south-america .continent-overview {
+    font-size: 1.1em;
+    text-align: justify;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+
+#south-america .country-list li {
+    border-left-color: #fcd116;
+}
+
+#south-america .country-list li:hover {
+    border-left-color: #009739;
+}
+
+/* Адаптивность для Южной Америки */
+@media (max-width: 768px) {
+    #south-america .landmark-list li,
+    #south-america .sport-list li,
+    #south-america .feature-list li,
+    #south-america .country-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #south-america .sport-note {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #south-america .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    #south-america .sub-list {
+        margin-left: 15px;
+    }
+    
+    .south-america-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .south-america-header .subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* ===== Аргентина - специфичные стили ===== */
+.argentina-header {
+    background: linear-gradient(135deg, #75aadb 0%, #ffffff 33%, #75aadb 66%, #75aadb 100%);
+    background-size: 300% 100%;
+    background-position: left;
+}
+
+/* Переопределение для Аргентины */
+#argentina .country-header h1 {
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+}
+
+#argentina .country-header .subtitle {
+    color: white !important;
+    opacity: 0.95;
+}
+
+#argentina .content-section h2 {
+    color: #75aadb !important;
+    border-bottom-color: #fcd116;
+}
+
+#argentina .content-section h3 {
+    color: #75aadb;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#argentina .landmark-list,
+#argentina .sport-list,
+#argentina .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#argentina .landmark-list li,
+#argentina .sport-list li,
+#argentina .feature-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #75aadb;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#argentina .landmark-list li:hover,
+#argentina .sport-list li:hover,
+#argentina .feature-list li:hover {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    transform: translateX(8px);
+    border-left-color: #1565c0;
+    box-shadow: 0 5px 15px rgba(117, 170, 219, 0.2);
+}
+
+#argentina .landmark-list li strong,
+#argentina .sport-list li strong,
+#argentina .feature-list li strong {
+    color: #75aadb;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#argentina .location {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #1565c0;
+    font-size: 0.9rem;
+}
+
+#argentina .sub-list {
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#argentina .sub-list li {
+    background: #e3f2fd;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border-left: 3px solid #75aadb;
+    font-size: 0.95rem;
+}
+
+#argentina .sub-list li:hover {
+    background: #bbdefb;
+    transform: translateX(5px);
+}
+
+#argentina .highlight {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #75aadb;
+    margin-bottom: 25px;
+}
+
+#argentina .highlight p {
+    margin: 0;
+    color: #333;
+    font-style: normal;
+}
+
+#argentina .country-fact {
+    background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+    padding: 20px;
+    border-left: 7px solid #fbc02d;
+    margin: 25px 0;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #3e2723;
+    box-shadow: 0 4px 15px rgba(200, 150, 60, 0.1);
+}
+
+#argentina .country-fact p {
+    margin: 0;
+}
+
+#argentina .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-radius: 10px;
+    border-left: 4px solid #75aadb;
+    font-weight: 500;
+}
+
+/* Адаптивность для Аргентины */
+@media (max-width: 768px) {
+    #argentina .landmark-list li,
+    #argentina .sport-list li,
+    #argentina .feature-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #argentina .sport-note,
+    #argentina .country-fact {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #argentina .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    #argentina .sub-list {
+        margin-left: 15px;
+    }
+    
+    .argentina-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .argentina-header .subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* ===== Бразилия - специфичные стили ===== */
+.brazil-header {
+    background: linear-gradient(135deg, #009739 0%, #fcd116 33%, #003893 66%, #003893 100%);
+    background-size: 300% 100%;
+    background-position: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.brazil-header::after {
+    content: "★";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    color: white;
+    opacity: 0.15;
+}
+
+/* Переопределение для Бразилии */
+#brazil .country-header h1 {
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+}
+
+#brazil .country-header .subtitle {
+    color: white !important;
+    opacity: 0.95;
+}
+
+#brazil .content-section h2 {
+    color: #009739 !important;
+    border-bottom-color: #fcd116;
+}
+
+#brazil .content-section h3 {
+    color: #003893;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#brazil .landmark-list,
+#brazil .sport-list,
+#brazil .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#brazil .landmark-list li,
+#brazil .sport-list li,
+#brazil .feature-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #009739;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#brazil .landmark-list li:hover,
+#brazil .sport-list li:hover,
+#brazil .feature-list li:hover {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    transform: translateX(8px);
+    border-left-color: #fcd116;
+    box-shadow: 0 5px 15px rgba(0, 151, 57, 0.2);
+}
+
+#brazil .landmark-list li strong,
+#brazil .sport-list li strong,
+#brazil .feature-list li strong {
+    color: #009739;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#brazil .location {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #003893;
+    font-size: 0.9rem;
+}
+
+#brazil .sub-list {
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#brazil .sub-list li {
+    background: #e8f5e9;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border-left: 3px solid #009739;
+    font-size: 0.95rem;
+}
+
+#brazil .sub-list li:hover {
+    background: #c8e6c9;
+    transform: translateX(5px);
+}
+
+#brazil .highlight {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #009739;
+    margin-bottom: 25px;
+}
+
+#brazil .highlight p {
+    margin: 0;
+    color: #333;
+    font-style: normal;
+}
+
+#brazil .country-fact {
+    background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+    padding: 20px;
+    border-left: 7px solid #fcd116;
+    margin: 25px 0;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #3e2723;
+    box-shadow: 0 4px 15px rgba(200, 150, 60, 0.1);
+}
+
+#brazil .country-fact p {
+    margin: 0;
+}
+
+#brazil .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-radius: 10px;
+    border-left: 4px solid #003893;
+    font-weight: 500;
+}
+
+/* Адаптивность для Бразилии */
+@media (max-width: 768px) {
+    #brazil .landmark-list li,
+    #brazil .sport-list li,
+    #brazil .feature-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #brazil .sport-note,
+    #brazil .country-fact {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #brazil .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    #brazil .sub-list {
+        margin-left: 15px;
+    }
+    
+    .brazil-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .brazil-header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .brazil-header::after {
+        font-size: 50px;
+    }
+}
+
+/* ===== Перу - специфичные стили ===== */
+.peru-header {
+    background: linear-gradient(135deg, #D91023 0%, #ffffff 50%, #D91023 100%);
+    background-size: 200% 100%;
+    background-position: left;
+}
+
+/* Переопределение для Перу */
+#peru .country-header h1 {
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+}
+
+#peru .country-header .subtitle {
+    color: white !important;
+    opacity: 0.95;
+}
+
+#peru .content-section h2 {
+    color: #D91023 !important;
+    border-bottom-color: #D91023;
+}
+
+#peru .content-section h3 {
+    color: #D91023;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#peru .landmark-list,
+#peru .sport-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#peru .landmark-list li,
+#peru .sport-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #D91023;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#peru .landmark-list li:hover,
+#peru .sport-list li:hover {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    transform: translateX(8px);
+    border-left-color: #a30d1a;
+    box-shadow: 0 5px 15px rgba(217, 16, 35, 0.2);
+}
+
+#peru .landmark-list li strong,
+#peru .sport-list li strong {
+    color: #D91023;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#peru .location {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #a30d1a;
+    font-size: 0.9rem;
+}
+
+#peru .highlight {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #D91023;
+    margin-bottom: 25px;
+}
+
+#peru .highlight p {
+    margin: 0;
+    color: #333;
+}
+
+#peru .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    border-radius: 10px;
+    border-left: 4px solid #D91023;
+    font-weight: 500;
+}
+
+/* Галерея изображений */
+#peru .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+#peru .image-gallery figure {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+#peru .image-gallery figure:hover {
+    transform: translateY(-5px);
+}
+
+#peru .image-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+#peru .image-gallery figcaption {
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Адаптивность для Перу */
+@media (max-width: 768px) {
+    #peru .landmark-list li,
+    #peru .sport-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #peru .sport-note,
+    #peru .highlight {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #peru .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .peru-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .peru-header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    #peru .image-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Уругвай - специфичные стили ===== */
+.uruguay-header {
+    background: linear-gradient(135deg, #0038A8 0%, #ffffff 25%, #FCD116 50%, #ffffff 75%, #0038A8 100%);
+    background-size: 400% 100%;
+    background-position: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.uruguay-header::after {
+    content: "☀";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: #FCD116;
+    opacity: 0.3;
+}
+
+/* Переопределение для Уругвая */
+#uruguay .country-header h1 {
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+}
+
+#uruguay .country-header .subtitle {
+    color: white !important;
+    opacity: 0.95;
+}
+
+#uruguay .content-section h2 {
+    color: #0038A8 !important;
+    border-bottom-color: #FCD116;
+}
+
+#uruguay .content-section h3 {
+    color: #0038A8;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#uruguay .landmark-list,
+#uruguay .sport-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#uruguay .landmark-list li,
+#uruguay .sport-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #0038A8;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#uruguay .landmark-list li:hover,
+#uruguay .sport-list li:hover {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    transform: translateX(8px);
+    border-left-color: #FCD116;
+    box-shadow: 0 5px 15px rgba(0, 56, 168, 0.2);
+}
+
+#uruguay .landmark-list li strong,
+#uruguay .sport-list li strong {
+    color: #0038A8;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#uruguay .location {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #0038A8;
+    font-size: 0.9rem;
+}
+
+#uruguay .highlight {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #0038A8;
+    margin-bottom: 25px;
+}
+
+#uruguay .highlight p {
+    margin: 0;
+    color: #333;
+}
+
+#uruguay .info-box {
+    background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+    padding: 20px;
+    border-left: 7px solid #FCD116;
+    margin: 25px 0;
+    border-radius: 10px;
+    font-weight: 500;
+    color: #3e2723;
+    box-shadow: 0 4px 15px rgba(200, 150, 60, 0.1);
+}
+
+#uruguay .info-box p {
+    margin: 0;
+}
+
+#uruguay .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-radius: 10px;
+    border-left: 4px solid #0038A8;
+    font-weight: 500;
+}
+
+/* Галерея изображений */
+#uruguay .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+#uruguay .image-gallery figure {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+#uruguay .image-gallery figure:hover {
+    transform: translateY(-5px);
+}
+
+#uruguay .image-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+#uruguay .image-gallery figcaption {
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Адаптивность для Уругвая */
+@media (max-width: 768px) {
+    #uruguay .landmark-list li,
+    #uruguay .sport-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #uruguay .sport-note,
+    #uruguay .info-box,
+    #uruguay .highlight {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #uruguay .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .uruguay-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .uruguay-header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .uruguay-header::after {
+        font-size: 40px;
+    }
+    
+    #uruguay .image-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Венесуэла - специфичные стили ===== */
+.venezuela-header {
+    background: linear-gradient(135deg, #CF142B 0%, #00247D 33%, #FFCC00 66%, #00247D 100%);
+    background-size: 400% 100%;
+    background-position: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.venezuela-header::after {
+    content: "★";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: #FFCC00;
+    opacity: 0.2;
+}
+
+/* Переопределение для Венесуэлы */
+#venezuela .country-header h1 {
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+}
+
+#venezuela .country-header .subtitle {
+    color: white !important;
+    opacity: 0.95;
+}
+
+#venezuela .content-section h2 {
+    color: #00247D !important;
+    border-bottom-color: #FFCC00;
+}
+
+#venezuela .content-section h3 {
+    color: #00247D;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#venezuela .landmark-list,
+#venezuela .sport-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#venezuela .landmark-list li,
+#venezuela .sport-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #00247D;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#venezuela .landmark-list li:hover,
+#venezuela .sport-list li:hover {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    transform: translateX(8px);
+    border-left-color: #FFCC00;
+    box-shadow: 0 5px 15px rgba(0, 36, 125, 0.2);
+}
+
+#venezuela .landmark-list li strong,
+#venezuela .sport-list li strong {
+    color: #00247D;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#venezuela .location {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #CF142B;
+    font-size: 0.9rem;
+}
+
+#venezuela .highlight {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #00247D;
+    margin-bottom: 25px;
+}
+
+#venezuela .highlight p {
+    margin: 0;
+    color: #333;
+}
+
+#venezuela .info-box {
+    background: linear-gradient(135deg, #fff9c4 0%, #fff59d 100%);
+    padding: 20px;
+    border-left: 7px solid #FFCC00;
+    margin: 25px 0;
+    border-radius: 10px;
+    font-weight: 500;
+    color: #3e2723;
+    box-shadow: 0 4px 15px rgba(200, 150, 60, 0.1);
+}
+
+#venezuela .info-box p {
+    margin: 0;
+}
+
+#venezuela .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-radius: 10px;
+    border-left: 4px solid #00247D;
+    font-weight: 500;
+}
+
+/* Галерея изображений */
+#venezuela .image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+#venezuela .image-gallery figure {
+    background: white;
+    border-radius: 12px;
+    padding: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+#venezuela .image-gallery figure:hover {
+    transform: translateY(-5px);
+}
+
+#venezuela .image-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+#venezuela .image-gallery figcaption {
+    text-align: center;
+    color: #555;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Адаптивность для Венесуэлы */
+@media (max-width: 768px) {
+    #venezuela .landmark-list li,
+    #venezuela .sport-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #venezuela .sport-note,
+    #venezuela .info-box,
+    #venezuela .highlight {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #venezuela .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .venezuela-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .venezuela-header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .venezuela-header::after {
+        font-size: 40px;
+    }
+    
+    #venezuela .image-gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== Северная Америка - специфичные стили ===== */
+.north-america-header {
+    background: linear-gradient(135deg, #B22234 0%, #ffffff 25%, #3C3B6E 50%, #ffffff 75%, #B22234 100%);
+    background-size: 400% 100%;
+    background-position: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.north-america-header::after {
+    content: "★";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #B22234;
+    opacity: 0.15;
+}
+
+/* Переопределение для Северной Америки */
+#north-america .continent-header h1 {
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+}
+
+#north-america .continent-header .subtitle {
+    color: white !important;
+    opacity: 0.95;
+}
+
+#north-america .content-section h2 {
+    color: #3C3B6E !important;
+    border-bottom-color: #B22234;
+}
+
+#north-america .content-section h3 {
+    color: #3C3B6E;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#north-america .feature-list,
+#north-america .facts-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#north-america .feature-list li,
+#north-america .facts-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #3C3B6E;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#north-america .feature-list li:hover,
+#north-america .facts-list li:hover {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    transform: translateX(8px);
+    border-left-color: #B22234;
+    box-shadow: 0 5px 15px rgba(60, 59, 110, 0.2);
+}
+
+#north-america .feature-list li strong,
+#north-america .facts-list li strong {
+    color: #3C3B6E;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#north-america .highlight {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #3C3B6E;
+    margin-bottom: 25px;
+}
+
+#north-america .highlight p {
+    margin: 0;
+    color: #333;
+}
+
+/* Адаптивность для Северной Америки */
+@media (max-width: 768px) {
+    #north-america .feature-list li,
+    #north-america .facts-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #north-america .highlight {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #north-america .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    .north-america-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .north-america-header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .north-america-header::after {
+        font-size: 35px;
+    }
+}
+
+/* ===== США - специфичные стили ===== */
+.usa-header {
+    background: linear-gradient(135deg, #B22234 0%, #ffffff 25%, #3C3B6E 50%, #ffffff 75%, #B22234 100%);
+    background-size: 400% 100%;
+    background-position: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.usa-header::after {
+    content: "★";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #B22234;
+    opacity: 0.15;
+}
+
+/* Переопределение для США */
+#usa .country-header h1 {
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+}
+
+#usa .country-header .subtitle {
+    color: white !important;
+    opacity: 0.95;
+}
+
+#usa .content-section h2 {
+    color: #3C3B6E !important;
+    border-bottom-color: #B22234;
+}
+
+#usa .content-section h3 {
+    color: #3C3B6E;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#usa .landmark-list,
+#usa .sport-list,
+#usa .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#usa .landmark-list li,
+#usa .sport-list li,
+#usa .feature-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #3C3B6E;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#usa .landmark-list li:hover,
+#usa .sport-list li:hover,
+#usa .feature-list li:hover {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    transform: translateX(8px);
+    border-left-color: #B22234;
+    box-shadow: 0 5px 15px rgba(60, 59, 110, 0.2);
+}
+
+#usa .landmark-list li strong,
+#usa .sport-list li strong,
+#usa .feature-list li strong {
+    color: #3C3B6E;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#usa .location {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #B22234;
+    font-size: 0.9rem;
+}
+
+#usa .sub-list {
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#usa .sub-list li {
+    background: #f8f9fa;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border-left: 3px solid #3C3B6E;
+    font-size: 0.95rem;
+}
+
+#usa .sub-list li:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+#usa .highlight {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #3C3B6E;
+    margin-bottom: 25px;
+}
+
+#usa .highlight p {
+    margin: 0;
+    color: #333;
+}
+
+#usa .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 10px;
+    border-left: 4px solid #3C3B6E;
+    font-weight: 500;
+}
+
+/* Адаптивность для США */
+@media (max-width: 768px) {
+    #usa .landmark-list li,
+    #usa .sport-list li,
+    #usa .feature-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #usa .sport-note,
+    #usa .highlight {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #usa .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    #usa .sub-list {
+        margin-left: 15px;
+    }
+    
+    .usa-header h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    .usa-header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .usa-header::after {
+        font-size: 35px;
+    }
+}
+
+/* ===== Канада - специфичные стили ===== */
+.canada-header {
+    background: linear-gradient(135deg, #FF0000 0%, #ffffff 50%, #FF0000 100%);
+    background-size: 200% 100%;
+    background-position: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.canada-header::after {
+    content: "🍁";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    color: #FF0000;
+    opacity: 0.2;
+}
+
+/* Переопределение для Канады */
+#canada .country-header h1 {
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+}
+
+#canada .country-header .subtitle {
+    color: white !important;
+    opacity: 0.95;
+}
+
+#canada .content-section h2 {
+    color: #FF0000 !important;
+    border-bottom-color: #FF0000;
+}
+
+#canada .content-section h3 {
+    color: #FF0000;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#canada .landmark-list,
+#canada .sport-list,
+#canada .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#canada .landmark-list li,
+#canada .sport-list li,
+#canada .feature-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #FF0000;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#canada .landmark-list li:hover,
+#canada .sport-list li:hover,
+#canada .feature-list li:hover {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    transform: translateX(8px);
+    border-left-color: #cc0000;
+    box-shadow: 0 5px 15px rgba(255, 0, 0, 0.2);
+}
+
+#canada .landmark-list li strong,
+#canada .sport-list li strong,
+#canada .feature-list li strong {
+    color: #FF0000;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#canada .location {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #cc0000;
+    font-size: 0.9rem;
+}
+
+#canada .sub-list {
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#canada .sub-list li {
+    background: #fff5f5;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border-left: 3px solid #FF0000;
+    font-size: 0.95rem;
+}
+
+#canada .sub-list li:hover {
+    background: #ffebee;
+    transform: translateX(5px);
+}
+
+#canada .highlight {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #FF0000;
+    margin-bottom: 25px;
+}
+
+#canada .highlight p {
+    margin: 0;
+    color: #333;
+}
+
+#canada .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    border-radius: 10px;
+    border-left: 4px solid #FF0000;
+    font-weight: 500;
+}
+
+/* Адаптивность для Канады */
+@media (max-width: 768px) {
+    #canada .landmark-list li,
+    #canada .sport-list li,
+    #canada .feature-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #canada .sport-note,
+    #canada .highlight {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #canada .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    #canada .sub-list {
+        margin-left: 15px;
+    }
+    
+    .canada-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .canada-header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .canada-header::after {
+        font-size: 50px;
+    }
+}
+
+/* ===== Мексика - специфичные стили ===== */
+.mexico-header {
+    background: linear-gradient(135deg, #006847 0%, #ffffff 33%, #CE1126 66%, #CE1126 100%);
+    background-size: 300% 100%;
+    background-position: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.mexico-header::after {
+    content: "🌵";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: #006847;
+    opacity: 0.2;
+}
+
+/* Переопределение для Мексики */
+#mexico .country-header h1 {
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+}
+
+#mexico .country-header .subtitle {
+    color: white !important;
+    opacity: 0.95;
+}
+
+#mexico .content-section h2 {
+    color: #006847 !important;
+    border-bottom-color: #CE1126;
+}
+
+#mexico .content-section h3 {
+    color: #006847;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#mexico .landmark-list,
+#mexico .sport-list,
+#mexico .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#mexico .landmark-list li,
+#mexico .sport-list li,
+#mexico .feature-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #006847;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#mexico .landmark-list li:hover,
+#mexico .sport-list li:hover,
+#mexico .feature-list li:hover {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    transform: translateX(8px);
+    border-left-color: #CE1126;
+    box-shadow: 0 5px 15px rgba(0, 104, 71, 0.2);
+}
+
+#mexico .landmark-list li strong,
+#mexico .sport-list li strong,
+#mexico .feature-list li strong {
+    color: #006847;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#mexico .location {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #CE1126;
+    font-size: 0.9rem;
+}
+
+#mexico .sub-list {
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#mexico .sub-list li {
+    background: #e8f5e9;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border-left: 3px solid #006847;
+    font-size: 0.95rem;
+}
+
+#mexico .sub-list li:hover {
+    background: #c8e6c9;
+    transform: translateX(5px);
+}
+
+#mexico .highlight {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #006847;
+    margin-bottom: 25px;
+}
+
+#mexico .highlight p {
+    margin: 0;
+    color: #333;
+}
+
+#mexico .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-radius: 10px;
+    border-left: 4px solid #006847;
+    font-weight: 500;
+}
+
+/* Адаптивность для Мексики */
+@media (max-width: 768px) {
+    #mexico .landmark-list li,
+    #mexico .sport-list li,
+    #mexico .feature-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #mexico .sport-note,
+    #mexico .highlight {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #mexico .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    #mexico .sub-list {
+        margin-left: 15px;
+    }
+    
+    .mexico-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .mexico-header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .mexico-header::after {
+        font-size: 40px;
+    }
+}
+
+/* ===== Гондурас - специфичные стили ===== */
+.honduras-header {
+    background: linear-gradient(135deg, #0073CF 0%, #ffffff 50%, #0073CF 100%);
+    background-size: 300% 100%;
+    background-position: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.honduras-header::after {
+    content: "★";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #0073CF;
+    opacity: 0.15;
+}
+
+/* Переопределение для Гондураса */
+#honduras .country-header h1 {
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+}
+
+#honduras .country-header .subtitle {
+    color: white !important;
+    opacity: 0.95;
+}
+
+#honduras .content-section h2 {
+    color: #0073CF !important;
+    border-bottom-color: #0073CF;
+}
+
+#honduras .content-section h3 {
+    color: #0073CF;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#honduras .landmark-list,
+#honduras .sport-list,
+#honduras .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#honduras .landmark-list li,
+#honduras .sport-list li,
+#honduras .feature-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #0073CF;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#honduras .landmark-list li:hover,
+#honduras .sport-list li:hover,
+#honduras .feature-list li:hover {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    transform: translateX(8px);
+    border-left-color: #005a9e;
+    box-shadow: 0 5px 15px rgba(0, 115, 207, 0.2);
+}
+
+#honduras .landmark-list li strong,
+#honduras .sport-list li strong,
+#honduras .feature-list li strong {
+    color: #0073CF;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#honduras .location {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #005a9e;
+    font-size: 0.9rem;
+}
+
+#honduras .sub-list {
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#honduras .sub-list li {
+    background: #e3f2fd;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border-left: 3px solid #0073CF;
+    font-size: 0.95rem;
+}
+
+#honduras .sub-list li:hover {
+    background: #bbdefb;
+    transform: translateX(5px);
+}
+
+#honduras .highlight {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #0073CF;
+    margin-bottom: 25px;
+}
+
+#honduras .highlight p {
+    margin: 0;
+    color: #333;
+}
+
+#honduras .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    border-radius: 10px;
+    border-left: 4px solid #0073CF;
+    font-weight: 500;
+}
+
+/* Адаптивность для Гондураса */
+@media (max-width: 768px) {
+    #honduras .landmark-list li,
+    #honduras .sport-list li,
+    #honduras .feature-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #honduras .sport-note,
+    #honduras .highlight {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #honduras .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    #honduras .sub-list {
+        margin-left: 15px;
+    }
+    
+    .honduras-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .honduras-header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .honduras-header::after {
+        font-size: 35px;
+    }
+}
+
+
+/* ===== Куба - специфичные стили ===== */
+.cuba-header {
+    background: linear-gradient(135deg, #CB1515 0%, #ffffff 33%, #002A8F 66%, #ffffff 100%);
+    background-size: 400% 100%;
+    background-position: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.cuba-header::after {
+    content: "★";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #CB1515;
+    opacity: 0.2;
+}
+
+/* Переопределение для Кубы */
+#cuba .country-header h1 {
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+}
+
+#cuba .country-header .subtitle {
+    color: white !important;
+    opacity: 0.95;
+}
+
+#cuba .content-section h2 {
+    color: #CB1515 !important;
+    border-bottom-color: #002A8F;
+}
+
+#cuba .content-section h3 {
+    color: #CB1515;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#cuba .landmark-list,
+#cuba .sport-list,
+#cuba .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#cuba .landmark-list li,
+#cuba .sport-list li,
+#cuba .feature-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #CB1515;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#cuba .landmark-list li:hover,
+#cuba .sport-list li:hover,
+#cuba .feature-list li:hover {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    transform: translateX(8px);
+    border-left-color: #002A8F;
+    box-shadow: 0 5px 15px rgba(203, 21, 21, 0.2);
+}
+
+#cuba .landmark-list li strong,
+#cuba .sport-list li strong,
+#cuba .feature-list li strong {
+    color: #CB1515;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#cuba .location {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #002A8F;
+    font-size: 0.9rem;
+}
+
+#cuba .sub-list {
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#cuba .sub-list li {
+    background: #ffebee;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border-left: 3px solid #CB1515;
+    font-size: 0.95rem;
+}
+
+#cuba .sub-list li:hover {
+    background: #ffcdd2;
+    transform: translateX(5px);
+}
+
+#cuba .highlight {
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #CB1515;
+    margin-bottom: 25px;
+}
+
+#cuba .highlight p {
+    margin: 0;
+    color: #333;
+}
+
+#cuba .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #ffebee 0%, #ffcdd2 100%);
+    border-radius: 10px;
+    border-left: 4px solid #CB1515;
+    font-weight: 500;
+}
+
+/* Адаптивность для Кубы */
+@media (max-width: 768px) {
+    #cuba .landmark-list li,
+    #cuba .sport-list li,
+    #cuba .feature-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #cuba .sport-note,
+    #cuba .highlight {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #cuba .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    #cuba .sub-list {
+        margin-left: 15px;
+    }
+    
+    .cuba-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .cuba-header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .cuba-header::after {
+        font-size: 35px;
+    }
+}
+
+/* ===== Африка - специфичные стили ===== */
+.africa-header {
+    background: linear-gradient(135deg, #009639 0%, #FCD116 33%, #DC143C 66%, #FCD116 100%);
+    background-size: 400% 100%;
+    background-position: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.africa-header::after {
+    content: "🦁";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    color: #009639;
+    opacity: 0.15;
+}
+
+/* Переопределение для Африки */
+#africa .continent-header h1 {
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+}
+
+#africa .continent-header .subtitle {
+    color: white !important;
+    opacity: 0.95;
+}
+
+#africa .content-section h2 {
+    color: #DC143C !important;
+    border-bottom-color: #009639;
+}
+
+#africa .content-section h3 {
+    color: #DC143C;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#africa .landmark-list,
+#africa .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#africa .landmark-list li,
+#africa .feature-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #DC143C;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#africa .landmark-list li:hover,
+#africa .feature-list li:hover {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    transform: translateX(8px);
+    border-left-color: #009639;
+    box-shadow: 0 5px 15px rgba(220, 20, 60, 0.2);
+}
+
+#africa .landmark-list li strong,
+#africa .feature-list li strong {
+    color: #DC143C;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#africa .location {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #009639;
+    font-size: 0.9rem;
+}
+
+#africa .sub-list {
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#africa .sub-list li {
+    background: #fff5f5;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border-left: 3px solid #DC143C;
+    font-size: 0.95rem;
+}
+
+#africa .sub-list li:hover {
+    background: #ffebee;
+    transform: translateX(5px);
+}
+
+#africa .highlight {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #DC143C;
+    margin-bottom: 25px;
+}
+
+#africa .highlight p {
+    margin: 0;
+    color: #333;
+}
+
+/* Адаптивность для Африки */
+@media (max-width: 768px) {
+    #africa .landmark-list li,
+    #africa .feature-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #africa .highlight {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #africa .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    #africa .sub-list {
+        margin-left: 15px;
+    }
+    
+    .africa-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .africa-header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .africa-header::after {
+        font-size: 45px;
+    }
+}
+
+/* ===== Алжир - специфичные стили ===== */
+.algeria-header {
+    background: linear-gradient(135deg, #007A3D 0%, #ffffff 50%, #D21034 100%);
+    background-size: 300% 100%;
+    background-position: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.algeria-header::after {
+    content: "☪";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: #D21034;
+    opacity: 0.2;
+}
+
+/* Переопределение для Алжира */
+#algeria .country-header h1 {
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+}
+
+#algeria .country-header .subtitle {
+    color: white !important;
+    opacity: 0.95;
+}
+
+#algeria .content-section h2 {
+    color: #007A3D !important;
+    border-bottom-color: #D21034;
+}
+
+#algeria .content-section h3 {
+    color: #007A3D;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#algeria .landmark-list,
+#algeria .sport-list,
+#algeria .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#algeria .landmark-list li,
+#algeria .sport-list li,
+#algeria .feature-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #007A3D;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#algeria .landmark-list li:hover,
+#algeria .sport-list li:hover,
+#algeria .feature-list li:hover {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    transform: translateX(8px);
+    border-left-color: #D21034;
+    box-shadow: 0 5px 15px rgba(0, 122, 61, 0.2);
+}
+
+#algeria .landmark-list li strong,
+#algeria .sport-list li strong,
+#algeria .feature-list li strong {
+    color: #007A3D;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#algeria .location {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #D21034;
+    font-size: 0.9rem;
+}
+
+#algeria .sub-list {
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#algeria .sub-list li {
+    background: #e8f5e9;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border-left: 3px solid #007A3D;
+    font-size: 0.95rem;
+}
+
+#algeria .sub-list li:hover {
+    background: #c8e6c9;
+    transform: translateX(5px);
+}
+
+#algeria .highlight {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #007A3D;
+    margin-bottom: 25px;
+}
+
+#algeria .highlight p {
+    margin: 0;
+    color: #333;
+}
+
+#algeria .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    border-radius: 10px;
+    border-left: 4px solid #007A3D;
+    font-weight: 500;
+}
+
+/* Адаптивность для Алжира */
+@media (max-width: 768px) {
+    #algeria .landmark-list li,
+    #algeria .sport-list li,
+    #algeria .feature-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #algeria .sport-note,
+    #algeria .highlight {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #algeria .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    #algeria .sub-list {
+        margin-left: 15px;
+    }
+    
+    .algeria-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .algeria-header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .algeria-header::after {
+        font-size: 40px;
+    }
+}
+
+/* ===== Египет - специфичные стили ===== */
+.egypt-header {
+    background: linear-gradient(135deg, #CE1126 0%, #FFFFFF 33%, #000000 66%, #FFFFFF 100%);
+    background-size: 400% 100%;
+    background-position: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.egypt-header::after {
+    content: "🦅";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: #CE1126;
+    opacity: 0.2;
+}
+
+/* Переопределение для Египта */
+#egypt .country-header h1 {
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+}
+
+#egypt .country-header .subtitle {
+    color: white !important;
+    opacity: 0.95;
+}
+
+#egypt .content-section h2 {
+    color: #CE1126 !important;
+    border-bottom-color: #000000;
+}
+
+#egypt .content-section h3 {
+    color: #CE1126;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#egypt .landmark-list,
+#egypt .sport-list,
+#egypt .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#egypt .landmark-list li,
+#egypt .sport-list li,
+#egypt .feature-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #CE1126;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#egypt .landmark-list li:hover,
+#egypt .sport-list li:hover,
+#egypt .feature-list li:hover {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    transform: translateX(8px);
+    border-left-color: #000000;
+    box-shadow: 0 5px 15px rgba(206, 17, 38, 0.2);
+}
+
+#egypt .landmark-list li strong,
+#egypt .sport-list li strong,
+#egypt .feature-list li strong {
+    color: #CE1126;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#egypt .location {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #000000;
+    font-size: 0.9rem;
+}
+
+#egypt .sub-list {
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#egypt .sub-list li {
+    background: #fff5f5;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border-left: 3px solid #CE1126;
+    font-size: 0.95rem;
+}
+
+#egypt .sub-list li:hover {
+    background: #ffebee;
+    transform: translateX(5px);
+}
+
+#egypt .highlight {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #CE1126;
+    margin-bottom: 25px;
+}
+
+#egypt .highlight p {
+    margin: 0;
+    color: #333;
+}
+
+#egypt .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    border-radius: 10px;
+    border-left: 4px solid #CE1126;
+    font-weight: 500;
+}
+
+/* Адаптивность для Египта */
+@media (max-width: 768px) {
+    #egypt .landmark-list li,
+    #egypt .sport-list li,
+    #egypt .feature-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #egypt .sport-note,
+    #egypt .highlight {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #egypt .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    #egypt .sub-list {
+        margin-left: 15px;
+    }
+    
+    .egypt-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .egypt-header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .egypt-header::after {
+        font-size: 40px;
+    }
+}
+
+/* ===== Марокко - специфичные стили ===== */
+.morocco-header {
+    background: linear-gradient(135deg, #C1272D 0%, #C1272D 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.morocco-header::after {
+    content: "★";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    color: #006233;
+    opacity: 0.3;
+}
+
+/* Переопределение для Марокко */
+#morocco .country-header h1 {
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+}
+
+#morocco .country-header .subtitle {
+    color: white !important;
+    opacity: 0.95;
+}
+
+#morocco .content-section h2 {
+    color: #C1272D !important;
+    border-bottom-color: #006233;
+}
+
+#morocco .content-section h3 {
+    color: #C1272D;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#morocco .landmark-list,
+#morocco .sport-list,
+#morocco .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#morocco .landmark-list li,
+#morocco .sport-list li,
+#morocco .feature-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #C1272D;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#morocco .landmark-list li:hover,
+#morocco .sport-list li:hover,
+#morocco .feature-list li:hover {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    transform: translateX(8px);
+    border-left-color: #006233;
+    box-shadow: 0 5px 15px rgba(193, 39, 45, 0.2);
+}
+
+#morocco .landmark-list li strong,
+#morocco .sport-list li strong,
+#morocco .feature-list li strong {
+    color: #C1272D;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#morocco .location {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #006233;
+    font-size: 0.9rem;
+}
+
+#morocco .sub-list {
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#morocco .sub-list li {
+    background: #fff5f5;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border-left: 3px solid #C1272D;
+    font-size: 0.95rem;
+}
+
+#morocco .sub-list li:hover {
+    background: #ffebee;
+    transform: translateX(5px);
+}
+
+#morocco .highlight {
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #C1272D;
+    margin-bottom: 25px;
+}
+
+#morocco .highlight p {
+    margin: 0;
+    color: #333;
+}
+
+#morocco .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #fff5f5 0%, #ffebee 100%);
+    border-radius: 10px;
+    border-left: 4px solid #C1272D;
+    font-weight: 500;
+}
+
+/* Адаптивность для Марокко */
+@media (max-width: 768px) {
+    #morocco .landmark-list li,
+    #morocco .sport-list li,
+    #morocco .feature-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #morocco .sport-note,
+    #morocco .highlight {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #morocco .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    #morocco .sub-list {
+        margin-left: 15px;
+    }
+    
+    .morocco-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .morocco-header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .morocco-header::after {
+        font-size: 50px;
+    }
+}
+
+/* ===== Австралия - специфичные стили ===== */
+.australia-header {
+    background: linear-gradient(135deg, #00008B 0%, #ffffff 50%, #FF0000 100%);
+    background-size: 300% 100%;
+    background-position: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.australia-header::after {
+    content: "🦘";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    color: #FF0000;
+    opacity: 0.2;
+}
+
+/* Переопределение для Австралии */
+#australia .country-header h1 {
+    color: white !important;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.5) !important;
+}
+
+#australia .country-header .subtitle {
+    color: white !important;
+    opacity: 0.95;
+}
+
+#australia .content-section h2 {
+    color: #00008B !important;
+    border-bottom-color: #FF0000;
+}
+
+#australia .content-section h3 {
+    color: #00008B;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#australia .landmark-list,
+#australia .sport-list,
+#australia .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#australia .landmark-list li,
+#australia .sport-list li,
+#australia .feature-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #00008B;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#australia .landmark-list li:hover,
+#australia .sport-list li:hover,
+#australia .feature-list li:hover {
+    background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+    transform: translateX(8px);
+    border-left-color: #FF0000;
+    box-shadow: 0 5px 15px rgba(0, 0, 139, 0.2);
+}
+
+#australia .landmark-list li strong,
+#australia .sport-list li strong,
+#australia .feature-list li strong {
+    color: #00008B;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#australia .location {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #FF0000;
+    font-size: 0.9rem;
+}
+
+#australia .sub-list {
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#australia .sub-list li {
+    background: #f0f4ff;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border-left: 3px solid #00008B;
+    font-size: 0.95rem;
+}
+
+#australia .sub-list li:hover {
+    background: #e0e7ff;
+    transform: translateX(5px);
+}
+
+#australia .highlight {
+    background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #00008B;
+    margin-bottom: 25px;
+}
+
+#australia .highlight p {
+    margin: 0;
+    color: #333;
+}
+
+#australia .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 100%);
+    border-radius: 10px;
+    border-left: 4px solid #00008B;
+    font-weight: 500;
+}
+
+/* Адаптивность для Австралии */
+@media (max-width: 768px) {
+    #australia .landmark-list li,
+    #australia .sport-list li,
+    #australia .feature-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #australia .sport-note,
+    #australia .highlight {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #australia .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    #australia .sub-list {
+        margin-left: 15px;
+    }
+    
+    .australia-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .australia-header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .australia-header::after {
+        font-size: 45px;
+    }
+}
+
+/* ===== Антарктида - специфичные стили ===== */
+.antarctica-header {
+    background: linear-gradient(135deg, #87CEEB 0%, #ffffff 33%, #4682B4 66%, #ffffff 100%);
+    background-size: 400% 100%;
+    background-position: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.antarctica-header::after {
+    content: "🐧";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    color: #4682B4;
+    opacity: 0.25;
+}
+
+/* Переопределение для Антарктиды */
+#antarctica .continent-header h1 {
+    color: #1a4d6b !important;
+    text-shadow: 2px 2px 4px rgba(255,255,255,0.8) !important;
+}
+
+#antarctica .continent-header .subtitle {
+    color: #1a4d6b !important;
+    opacity: 0.95;
+}
+
+#antarctica .content-section h2 {
+    color: #1a4d6b !important;
+    border-bottom-color: #4682B4;
+}
+
+#antarctica .content-section h3 {
+    color: #1a4d6b;
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#antarctica .landmark-list,
+#antarctica .sport-list,
+#antarctica .feature-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#antarctica .landmark-list li,
+#antarctica .sport-list li,
+#antarctica .feature-list li {
+    background: white;
+    padding: 15px 20px;
+    margin: 12px 0;
+    border-radius: 10px;
+    border-left: 4px solid #4682B4;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    line-height: 1.6;
+}
+
+#antarctica .landmark-list li:hover,
+#antarctica .sport-list li:hover,
+#antarctica .feature-list li:hover {
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+    transform: translateX(8px);
+    border-left-color: #1a4d6b;
+    box-shadow: 0 5px 15px rgba(70, 130, 180, 0.2);
+}
+
+#antarctica .landmark-list li strong,
+#antarctica .sport-list li strong,
+#antarctica .feature-list li strong {
+    color: #1a4d6b;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#antarctica .location {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+    color: #4682B4;
+    font-size: 0.9rem;
+}
+
+#antarctica .sub-list {
+    list-style: disc;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#antarctica .sub-list li {
+    background: #f0f8ff;
+    padding: 8px 15px;
+    margin: 5px 0;
+    border-radius: 6px;
+    border-left: 3px solid #4682B4;
+    font-size: 0.95rem;
+}
+
+#antarctica .sub-list li:hover {
+    background: #e6f2ff;
+    transform: translateX(5px);
+}
+
+#antarctica .highlight {
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #4682B4;
+    margin-bottom: 25px;
+}
+
+#antarctica .highlight p {
+    margin: 0;
+    color: #333;
+}
+
+#antarctica .sport-note {
+    margin-top: 25px;
+    padding: 20px;
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+    border-radius: 10px;
+    border-left: 4px solid #4682B4;
+    font-weight: 500;
+}
+
+/* Адаптивность для Антарктиды */
+@media (max-width: 768px) {
+    #antarctica .landmark-list li,
+    #antarctica .sport-list li,
+    #antarctica .feature-list li {
+        padding: 12px 15px;
+        font-size: 0.95rem;
+    }
+    
+    #antarctica .sport-note,
+    #antarctica .highlight {
+        font-size: 0.95rem;
+        padding: 15px;
+    }
+    
+    #antarctica .content-section h3 {
+        font-size: 1.2rem;
+    }
+    
+    #antarctica .sub-list {
+        margin-left: 15px;
+    }
+    
+    .antarctica-header h1 {
+        font-size: 2rem !important;
+    }
+    
+    .antarctica-header .subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .antarctica-header::after {
+        font-size: 45px;
+    }
+}

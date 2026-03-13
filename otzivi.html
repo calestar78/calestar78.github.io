@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Отзывы</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Главная</a>
+        <a href="about.html">Об авторе</a>
+        <a href="Europe.html">Европа</a>
+        <a href="Asia.html">Азия</a>
+        <a href="SouthAmerika.html">Южная Америка</a>
+        <a href="NorthAmerika.html">Северная Америка</a>
+        <a href="Afrika.html">Африка</a>
+        <a href="Australia.html">Австралия</a>
+        <a href="Antarktida.html">Антарктида</a>
+        <a href="otzivi.html">Отзывы</a>
+    </nav>
+</header>
+
+<main id="reviews" class="reviews-page">
+    <div class="reviews-header">
+        <h1>ОТЗЫВЫ</h1>
+        <p class="subtitle">Ваше мнение важно для нас</p>
+    </div>
+    
+    <div class="container">
+        <section class="content-section">
+            <form action="action.php" method="post" class="review-form">
+                <div class="form-group">
+                    <label for="name"><strong>ФИО</strong></label>
+                    <input type="text" id="name" name="name" placeholder="Иванов Иван Иванович" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email"><strong>Email</strong></label>
+                    <input type="email" id="email" name="email" placeholder="email@*.*" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone"><strong>Телефон</strong></label>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 900 000 00 00" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="date"><strong>Дата</strong></label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time"><strong>Время</strong></label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label><strong>Чего Вам не хватает на сайте?</strong></label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" name="more_pages" checked>
+                            <span class="checkmark"></span>
+                            Не все страны
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" name="about_country">
+                            <span class="checkmark"></span>
+                            Мало информации о стране
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" name="president">
+                            <span class="checkmark"></span>
+                            Нет информации о президенте страны
+                        </label>
+                        <label class="checkbox-container">
+                            <input type="checkbox" name="in_elements">
+                            <span class="checkmark"></span>
+                            Недостаточно интерактивных элементов
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label><strong>Ваш пол</strong></label>
+                    <div class="radio-group">
+                        <label class="radio-container">
+                            <input type="radio" name="sex" value="male" checked>
+                            <span class="checkmark"></span>
+                            Мужчина
+                        </label>
+                        <label class="radio-container">
+                            <input type="radio" name="sex" value="female">
+                            <span class="checkmark"></span>
+                            Женщина
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="rank"><strong>Уровень вашей удовлетворённости сайтом (от 0 до 10)</strong></label>
+                    <div class="range-container">
+                        <input type="range" id="rank" name="rank" min="0" max="10" value="5">
+                        <div class="range-labels">
+                            <span>0</span>
+                            <span>5</span>
+                            <span>10</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="where"><strong>Откуда вы узнали о сайте?</strong></label>
+                    <select id="where" name="where">
+                        <option value="Делал его на уроке">Делал его на уроке</option>
+                        <option value="Нашел в поиске">Нашел в поиске</option>
+                        <option value="Сказали друзья">Сказали друзья</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="additional"><strong>Дополнительные комментарии и пожелания</strong></label>
+                    <textarea id="additional" name="additional" rows="6" placeholder="Напишите ваши пожелания здесь..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Отправить отзыв</button>
+            </form>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <p>&copy;2026 Все права защищены</p>
+</footer>
+
+</body>
+</html>
